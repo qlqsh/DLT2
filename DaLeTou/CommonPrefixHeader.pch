@@ -1,0 +1,55 @@
+//
+//  CommonPrefixHeader.pch
+//  DaLeTou
+//
+//  Created by 刘明 on 2017/5/4.
+//  Copyright © 2017年 刘明. All rights reserved.
+//
+
+#ifndef CommonPrefixHeader_pch
+#define CommonPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* CommonPrefixHeader_pch */
+
+// 常用颜色
+#define kRedColor kRGBColor(230.0, 83.0, 75.0)
+#define kBlueColor kRGBColor(2.0, 170.0, 238.0)
+#define kGreenColor kRGBColor(10.0, 197.0, 0.0)
+#define kOrangeColor kRGBColor(255.0, 150.0, 0.0)
+#define kYellowColor kRGBColor(253.0, 199.0, 30.0)
+#define kCyanColor kRGBColor(126.0, 212.0, 228.0)
+#define kRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define kRGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+// 屏幕相关
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavigationHeight self.navigationController.navigationBar.frame.size.height
+
+
+// 替代NSLog，可以输出类名、方法名、行号。
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#endif
+
+// 常用图像
+#define kWhiteImage  [UIImage imageNamed:@"WhiteBallBackground"]
+#define kRedImage    [UIImage imageNamed:@"RedBallBackground"]
+#define kBlueImage   [UIImage imageNamed:@"BlueBallBackground"]
+
+// 默认球属性
+#define kDefaultBallFontSize 18.0f  // 在40X40情况下的，默认字体大小。
+#define kDefaultBallWidth 36.0f     // 默认（宽）大小
+#define kDefaultSpace 2.0f          // 默认间隔
+
+// 数据文档。临时数据都保存在/Library/Caches/
+#define kWinningsLocalDocumentPath [NSHomeDirectory() stringByAppendingString:@"/Library/Caches/dlt_winnings.plist"]
+
+// 网络数据地址。
+#define kBaseURL @"http://datachart.500.com/dlt/history/newinc/history.php?"

@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  DaLeTou
+
+  Created by 刘明 on 2017/6/16.
+  Copyright © 2017年 刘明. All rights reserved.
+*/
+
+/*
+    开始视图（FunctionViewController）
+*/
+"FVC_title" = "功能列表";
+
+/*
+    获奖功能，包括3个视图。
+        获奖列表视图（WinningsViewController）
+        获奖细节视图（WinningDetailViewController）
+        获奖规则视图（WinningRuleViewController）
+*/
+"WVC_title" = "开奖历史";
+"WDVC_title" = "本期开奖";
+"WDVC_ruleButton_title" = "获奖规则";
+
+
+// 统计视图
+"headerTitleRed" = "红球";
+"headerTitleBlue" = "蓝球";
